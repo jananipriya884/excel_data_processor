@@ -1,3 +1,4 @@
+
 # 📊 Excel Data Processor
 
 A powerful web-based application that lets users upload Excel files, preprocess them (remove duplicates, handle missing data), generate insightful visualizations, and store the results in a MySQL database — all with a clean and simple Flask interface.
@@ -43,10 +44,41 @@ A powerful web-based application that lets users upload Excel files, preprocess 
 
 ```bash
 python -m venv excel_processor_env
-.\excel_processor_env\Scripts\activate    # For Windows
-**### 📦 Install Required Dependencies
-pip install -r requirements.txt**
-📁 Project Structure
+.\excel_processor_env\Scripts\activate   # For Windows
+````
+
+### 3. 📦 Install Required Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. 🔑 Configure MySQL
+
+In `app.py`, update the following section with your MySQL credentials:
+
+```python
+DB_CONFIG = {
+    'host': 'localhost',
+    'user': 'your_mysql_username',
+    'password': 'your_mysql_password',
+    'database': 'excel_data_db'
+}
+```
+
+### 5. 🚀 Run the Application
+
+```bash
+python app.py
+```
+
+Open your browser and go to: [http://localhost:5000](http://localhost:5000)
+
+---
+
+## 📁 Project Structure
+
+```
 excel_data_processor/
 ├── app.py                  # Main Flask application
 ├── uploads/                # Folder to store uploaded files
@@ -55,9 +87,21 @@ excel_data_processor/
 ├── static/                 # Optional: add custom CSS/JS here
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
+```
 
-🔐 Security & Limitations
-Max upload size: 16MB
-Only .xlsx and .xls files are accepted
-Assumes local MySQL server setup
-Not meant for production without Docker, Auth, and HTTPS
+---
+
+## 🔐 Security & Limitations
+
+* Max upload size: **16MB**
+* Only `.xlsx` and `.xls` files are accepted
+* Assumes local MySQL server setup
+* Not meant for production without:
+
+  * Dockerization
+  * Authentication system
+  * HTTPS/SSL protection
+
+---
+
+
