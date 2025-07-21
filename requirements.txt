@@ -1,0 +1,11 @@
+Flask==3.0.0
+pandas==2.1.4
+numpy==1.26.2
+mysql-connector-python==8.2.0
+openpyxl==3.1.2
+xlrd==2.0.1
+matplotlib==3.8.2
+seaborn==0.13.0
+Werkzeug==3.0.1
+setuptools==69.0.3
+
